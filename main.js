@@ -40,7 +40,6 @@ async function loadWarStats(){
 }
 loadWarStats()
 function getWarStats(result){
-    console.log(result.data)
     for(let key in result.data.stats){
         if(document.querySelector(`.${key}`)){
             document.querySelector(`.${key}`).innerHTML = result.data.stats[key]
