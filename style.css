@@ -194,9 +194,12 @@ textarea {resize: vertical;}
 }
 
 /* style */
-body{font-family: Georgia, 'Times New Roman', Times, serif;height: 100vh;width: 100%;background-image:url(./img/pixel-bg.jpg);background-repeat: no-repeat;background-size: cover;}
+body{font-family: Georgia, 'Times New Roman', Times, serif;height: 100vh;width: 100%;background-image:url(./img/pixel-bg.jpg);}
 .wrapp{display: flex;flex-wrap: wrap;justify-content: center;}
 .wrapp-container{background-color: #36291370;;padding:15px;margin-top: 20px;width: 80%;border-radius: 15px;color: #ffff;}
+.wrapp-container:last-child{
+    margin-bottom: 10px;
+}
 /* media */
 @media (max-width:991px) {
     .wrapp-container{
@@ -213,7 +216,10 @@ body{font-family: Georgia, 'Times New Roman', Times, serif;height: 100vh;width: 
 .weather-feels{font-size: 20px;}
 /* media */
 @media (max-width:991px) {
-    
+    .city{font-size: 22px;font-weight: 600;line-height: 1.5;}
+    .cloud{font-size: 16px;}
+    .weather-temp{font-size: 16px;line-height: 1.5;}
+    .weather-feels{font-size: 16px;}
 }
 
 /* war */
@@ -261,12 +267,14 @@ body{font-family: Georgia, 'Times New Roman', Times, serif;height: 100vh;width: 
     display: flex;
     align-items: center;
     font-size: 16px;
+    margin-right: 10px;
 }
 .img-title img{
     width: 60px;
     height: 60px;
     margin-right: 20px;
 }
+/* media */
 /* media */
 @media (max-width:991px) {
     .war-statistic{
@@ -277,5 +285,26 @@ body{font-family: Georgia, 'Times New Roman', Times, serif;height: 100vh;width: 
     }
     .statistic-right {
         margin-left: 0;
+    }
+    .war-title{
+        margin-bottom: 15px;
+    }
+    .war-title-name{
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+    .war-title-date{
+        text-align: center;
+        font-size: 16px;
+    }
+    .static-info-wrapp{
+        font-size: 18px;
+    }
+    .img-title img{
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
     }
 }
