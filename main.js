@@ -1,4 +1,5 @@
 // for weather
+let date = new Date
 const wheatherValue = {
   url: "https://api.openweathermap.org/data/2.5/",
   appid: "9140380415ce30a751b279e449096e79",
@@ -10,15 +11,16 @@ const weatherTemp = document.querySelector(".weather-temp");
 const weatherFeels = document.querySelector(".weather-feels-like");
 const cityId = "707471";
 const wheatherUrl = `${wheatherValue.url}weather?id=${cityId}&appid=${wheatherValue.appid}`;
-// for war statistics
-let date = new Date
 let dateWeather = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`
+
+// for war statistics
 let dateWar = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()-1}`
 
-// fetch weather
+// data weather
 async function loadWeather(url) {
   const response = await fetch(url);
   const data = await response.json();
+
   return getWeather(data);
 }
 loadWeather(wheatherUrl);
@@ -32,7 +34,7 @@ function getWeather(data) {
     document.querySelector('.date-weather').innerHTML = dateWeather
 }
 
-// fetch war stats
+// data war stats
 async function loadWarStats(){
     const response = await fetch(`https://russianwarship.rip/api/v1/statistics/${dateWar}`)
     const result = await response.json()
